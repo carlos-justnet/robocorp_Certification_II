@@ -18,6 +18,7 @@ def order_robots_from_RobotSpareBin():
     """
     open_robot_order_website()
     orders = get_orders()
+
     for order in orders:
         close_annoying_modal()
         fill_the_form(order)
@@ -27,6 +28,7 @@ def order_robots_from_RobotSpareBin():
         screenshot = screenshot_robot(order["Order number"])
         embed_screenshot_to_receipt(screenshot, pdf_file)
         order_another_robot()
+
     create_zip_archive()
 
 
